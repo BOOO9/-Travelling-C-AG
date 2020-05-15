@@ -1,0 +1,6 @@
+#ifndef CCHEADER_H_INCLUDED
+#define CCHEADER_H_INCLUDED
+
+int menu();
+
+#endif // CCHEADER_H_INCLUDED
