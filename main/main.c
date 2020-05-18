@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib/CCheader.h"
+//#include "lib/CCheader.h"
+
+int menu();
 
 typedef struct
 {
@@ -16,9 +18,9 @@ typedef struct
     long population;
     long id;
 
-    struct cntry *next;
+}cntryTemp;
 
-}cntry;
+cntryTemp cntry[50];
 
 int main()
 {

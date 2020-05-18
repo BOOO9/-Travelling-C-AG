@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589555855 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
+1589572973 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
 	<stdio.h>
 	<stdlib.h>
 	"lib/CCheader.h"
