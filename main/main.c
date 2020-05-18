@@ -2,7 +2,23 @@
 #include <stdlib.h>
 #include "lib/CCheader.h"
 
+typedef struct
+{
+    char city[25];
+    char city_ascii[25];
+    float lat;
+    float lng;
+    char country[25];
+    char iso2 [2];
+    char iso3 [3];
+    char admin_name[25];
+    char capital[25];
+    long population;
+    long id;
 
+    struct cntry *next;
+
+}cntry;
 
 int main()
 {
