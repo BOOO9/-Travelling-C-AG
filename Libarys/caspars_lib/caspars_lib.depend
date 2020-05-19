@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1589556181 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\main.c
+1589837578 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\main.c
 	<stdio.h>
+	<string.h>
 

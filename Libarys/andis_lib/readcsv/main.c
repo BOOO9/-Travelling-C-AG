@@ -4,6 +4,7 @@
 
 int ersteZeile()
 {
+/*
     char puffer[200];
     char delimiter[]="\"";
     char *puffer_ptr;
@@ -90,6 +91,6 @@ int ersteZeile()
         }
     }
     fclose(myfile);
-
+*/
     return 0;
 }

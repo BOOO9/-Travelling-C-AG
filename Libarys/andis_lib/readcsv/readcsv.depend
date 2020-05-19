@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1589881351 source:c:\users\andreas\desktop\studium mechatronik\2 semester\pad2\projekt\git test\travelling-c-ag\libarys\andis_lib\readcsv\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
