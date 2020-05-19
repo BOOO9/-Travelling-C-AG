@@ -43,7 +43,7 @@ int ersteZeile()
                 }
                 switch(dataEntry)
                 {
-                    case 0: strcpy(city,puffer_ptr);
+                    case 0: strcpy(cntry[counter].city,puffer_ptr);
                     printf("city: %s\n",city);
                     break;
                     case 1: strcpy(cityAscii,puffer_ptr);
