@@ -1,30 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "lib/CCheader.h"
+#include "lib/CCheader.h"
 
-int menu();
 
 typedef struct
 {
-    char city[25];
-    char city_ascii[25];
+    char city[50];
+    char city_ascii[50];
     float lat;
     float lng;
-    char country[25];
-    char iso2 [2];
-    char iso3 [3];
-    char admin_name[25];
-    char capital[25];
+    char country[50];
+    char iso2 [3];
+    char iso3 [4];
+    char admin_name[50];
+    char capital[50];
     long population;
     long id;
 
 }cntryTemp;
 
-cntryTemp cntry[50];
+cntryTemp cntry[100];
+
+int cntr = 0;
 
 int main()
 {
+
+
+    cntryEingabe(&cntr, cntry);
+
+    for (int i = 0; i < cntr; i++)
+    {
+        printf("%s\n", cntry[i].city);
+    }
+
+
+    return 0;
+
+
+}
+
+
+/*
+int main()
+{
     int running = 1;
+
+
 
 
     while (running == 1)
@@ -56,3 +78,5 @@ int main()
 
 
 }
+
+*/
