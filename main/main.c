@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lib/CCheader.h"
+#include "lib/Aheader.h"
+#include "lib/Gheader.h"
 
 
 
@@ -29,6 +31,12 @@ int main()
 
 
     menu();
+
+    test_Fnct_Andi();
+
+    printf("\n");
+
+    test_Fnct_Grue();
 
 
 
