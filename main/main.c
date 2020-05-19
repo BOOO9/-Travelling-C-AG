@@ -3,6 +3,7 @@
 #include "lib/CCheader.h"
 
 
+
 typedef struct
 {
     char city[50];
@@ -27,18 +28,17 @@ int main()
 {
 
 
-    cntryEingabe(&cntr, cntry);
+    menu();
 
-    for (int i = 0; i < cntr; i++)
-    {
-        printf("%s\n", cntry[i].city);
-    }
 
 
     return 0;
 
 
 }
+
+
+
 
 
 /*

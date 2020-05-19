@@ -4,7 +4,7 @@
 
 int ersteZeile()
 {
-/*
+
     char puffer[200];
     char delimiter[]="\"";
     char *puffer_ptr;
@@ -44,7 +44,7 @@ int ersteZeile()
                 }
                 switch(dataEntry)
                 {
-                    case 0: strcpy(cntry[counter].city,puffer_ptr);
+                    case 0: strcpy(cntry.city, puffer_ptr);
                     printf("city: %s\n",city);
                     break;
                     case 1: strcpy(cityAscii,puffer_ptr);
@@ -91,6 +91,6 @@ int ersteZeile()
         }
     }
     fclose(myfile);
-*/
+
     return 0;
 }
