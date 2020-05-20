@@ -1,3 +1,4 @@
+
 // Caspars Libary und Funktionen
 
 #include <stdio.h>
