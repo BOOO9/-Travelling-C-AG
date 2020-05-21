@@ -2,5 +2,6 @@
 #define CCHEADER_H_INCLUDED
 
 int menu();
+void cntryEingabe();
 
 #endif // CCHEADER_H_INCLUDED

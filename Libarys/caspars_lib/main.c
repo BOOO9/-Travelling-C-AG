@@ -37,7 +37,7 @@ int menu()
     printf("Wenn Sie eine neuen Stadt zur Datenbank hinzufuegen wollen......3\n");
     printf("Wenn Sie das Programm beeden wollen.............................0\n\n");
     scanf("%1d", &choice);
-
+    printf("\n\n");
 
 
     return choice;
@@ -49,12 +49,15 @@ void cntryEingabe(int *cntr_ptr, cntryTemp *cntry)
 
     int cntr = *cntr_ptr;
 
+    char temp;
+    scanf("%c", &temp);                                         //damit fgets() nicht das vorangegangenen Leerzeichen einliest
+
     printf("Geben sie eine Stadt ein: ");
 
-    fgets(cntry[cntr].city, 50, stdin);               // fegts damit auch Abstände eingelesen werden
+    fgets(cntry[cntr].city, 50, stdin);                            // fegts damit auch Abstände eingelesen werden
 
 
-    if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')          // löscht den Zeilenumbruch am Ende des Strings (falls vorhanden)
+    if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')      // löscht den Zeilenumbruch am Ende des Strings (falls vorhanden)
     {
         cntry[cntr].city[strlen(cntry[cntr].city) - 1] = '\0';
     }
@@ -78,7 +81,7 @@ void cntryEingabe(int *cntr_ptr, cntryTemp *cntry)
     for(int i = 0; i < 101; i++)
     {
 
-        printf("Geben sie noch eine Stadt ein (oder '0' wenn Sie fertig sind):");
+        printf("Geben sie noch eine Stadt ein (oder '0' wenn Sie fertig sind): ");
         fgets(cntry[cntr].city, 50, stdin);
 
         if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')

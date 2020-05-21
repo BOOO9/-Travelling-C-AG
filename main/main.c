@@ -25,47 +25,27 @@ typedef struct
 cntryTemp cntry[100];
 
 int cntr = 0;
-
-int main()
-{
-
-
-    menu();
-
-    test_Fnct_Andi();
-
-    printf("\n");
-
-    test_Fnct_Grue();
+int *cntr_ptr = &cntr;
 
 
 
-    return 0;
-
-
-}
-
-
-
-
-
-/*
 int main()
 {
     int running = 1;
+    int test = 0;
 
 
-
-
-    while (running == 1)
+    while (running == 1)                            //Menü Schleife
     {
-        int choice = menu();        //menu gibt Zahl von 0-3 zurück
+        int choice = menu();                        //menu() gibt Zahl von 0-3 zurück
 
         if (choice == 1)
         {
-            //Eingabe von Städtenamen
+
+            cntryEingabe(cntr_ptr, cntry);          // liest Städte in das cntry[] Array ein und erhöt für jede Stadt den Pointer um 1
+
             //Städte sortiert ausgeben
-            system("cls");
+            //system("cls");
         }
         else if (choice == 2)
         {
@@ -87,4 +67,4 @@ int main()
 
 }
 
-*/
+
