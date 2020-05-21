@@ -3,6 +3,10 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "lib/Aheader.h"
+#include "lib/Gheader.h"
+
+
 
 
 typedef struct
@@ -19,7 +23,9 @@ typedef struct
     long population;
     long id;
 
-}cntryTemp;
+}cityTemp;
+
+
 
 int menu()
 {
@@ -44,61 +50,76 @@ int menu()
 }
 
 
-void cntryEingabe(int *cntr_ptr, cntryTemp *cntry)
+void cityInput(int *cntr_ptr, cityTemp city[100])
 {
+    char temp[50];
 
     int cntr = *cntr_ptr;
 
-    char temp;
-    scanf("%c", &temp);                                         //damit fgets() nicht das vorangegangenen Leerzeichen einliest
+    scanf("%c", &temp);                                             //damit fgets() nicht das vorangegangenen Leerzeichen einliest
 
     printf("Geben sie eine Stadt ein: ");
 
-    fgets(cntry[cntr].city, 50, stdin);                            // fegts damit auch Abstände eingelesen werden
+    fgets(temp, 50, stdin);                                         // fegts damit auch Abstände eingelesen werden
 
-
-    if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')      // löscht den Zeilenumbruch am Ende des Strings (falls vorhanden)
+    if ( (strlen(temp)) > 0 && temp[strlen(temp) - 1] == '\n')      // löscht den Zeilenumbruch am Ende des Strings (falls vorhanden)
     {
-        cntry[cntr].city[strlen(cntry[cntr].city) - 1] = '\0';
+        temp[strlen(temp) - 1] = '\0';
     }
 
     cntr++;
+    readcsv(city, cntr, temp);                                     // holt sich die Daten aus der CSV Datei
 
     printf("Geben sie noch eine Stadt ein: ");
 
-    fgets(cntry[cntr].city, 50, stdin);
+    fgets(temp, 50, stdin);
 
 
-    if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')
+    if ( (strlen(temp)) > 0 && temp[strlen(temp) - 1] == '\n')
     {
-        cntry[cntr].city[strlen(cntry[cntr].city) - 1] = '\0';
+        temp[strlen(temp) - 1] = '\0';
     }
 
     cntr++;
-
+    readcsv(city, cntr, temp);
 
     // fragt solange Städte ab bis 0 eingegeben wird oder der counter 100 ereicht
     for(int i = 0; i < 101; i++)
     {
 
         printf("Geben sie noch eine Stadt ein (oder '0' wenn Sie fertig sind): ");
-        fgets(cntry[cntr].city, 50, stdin);
+        fgets(temp, 50, stdin);
 
-        if ( (strlen(cntry[cntr].city)) > 0 && cntry[cntr].city[strlen(cntry[cntr].city) - 1] == '\n')
+        if ( (strlen(temp)) > 0 && temp[strlen(temp) - 1] == '\n')
         {
-            cntry[cntr].city[strlen(cntry[cntr].city) - 1] = '\0';
+            temp[strlen(temp) - 1] = '\0';
         }
 
-        if(cntry[cntr].city[0] != '0')
+        if(temp[0] != '0')
         {
             cntr++;
+            readcsv(city, cntr, temp);
             continue;
         }
 
-        else if(cntry[cntr].city[0] == '0') break;
+        else if(temp[0] == '0') break;
 
     }
 
     *cntr_ptr = cntr;
 
 }
+
+/*
+int main()
+{
+
+    cityInput (&cntr, city);
+
+    printf("%f", city[1].lat);
+
+
+
+}
+
+*/

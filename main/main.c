@@ -20,12 +20,12 @@ typedef struct
     long population;
     long id;
 
-}cntryTemp;
+}cityTemp;
 
-cntryTemp cntry[100];
+cityTemp citys[100];
 
 int cntr = 0;
-int *cntr_ptr = &cntr;
+
 
 
 
@@ -33,16 +33,7 @@ int main()
 {
     int running = 1;
 
-    int position=1;
-    char cityName[50] = "Ennadai";
 
-    readcsv(cntry, position, cityName);
-
-    printf("%f\n", cntry[1].lat);
-
-
-
-/*
     while (running == 1)                            //Menü Schleife
     {
         int choice = menu();                        //menu() gibt Zahl von 0-3 zurück
@@ -50,9 +41,27 @@ int main()
         if (choice == 1)
         {
 
-            cntryEingabe(cntr_ptr, cntry);          // liest Städte in das cntry[] Array ein und erhöt für jede Stadt den Pointer um 1
+            cityInput(&cntr, citys);                // liest Städte in das citys[] Array ein und füllt das Array mit den Daten aus der CSV
 
-            //Städte sortiert ausgeben
+                for(int i = 1; i < cntr+1; i++)                             // test ob die Daten eingelesen werden
+                {
+
+                    printf("\n\ncity: %s\n",citys[i].city);
+                    printf("cityAscii: %s\n",citys[i].city_ascii);
+                    printf("lat: %f\n",citys[i].lat);
+                    printf("lng: %f\n",citys[i].lng);
+                    printf("country: %s\n",citys[i].country);
+                    printf("iso2: %s\n",citys[i].iso2);
+                    printf("iso3: %s\n",citys[i].iso3);
+                    printf("adminName: %s\n",citys[i].admin_name);
+                    printf("capital: %s\n",citys[i].capital);
+                    printf("population: %ld\n",citys[i].population);
+                    printf("id: %ld\n\n",citys[i].id);
+                    printf("---------------------------------------------");
+
+                }
+
+
             //system("cls");
         }
         else if (choice == 2)
@@ -71,7 +80,7 @@ int main()
         else running = 0;
 
     }
-    */
+
 
 
 }

@@ -2,6 +2,6 @@
 #define CCHEADER_H_INCLUDED
 
 int menu();
-void cntryEingabe();
+void cityInput();
 
 #endif // CCHEADER_H_INCLUDED

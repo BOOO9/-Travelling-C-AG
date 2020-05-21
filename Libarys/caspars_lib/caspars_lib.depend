@@ -1,5 +1,11 @@
 # depslib dependency file v1.0
-1590050273 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\main.c
+1590053651 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\main.c
 	<stdio.h>
 	<string.h>
+	"lib/Aheader.h"
+	"lib/Gheader.h"
+
+1590050682 c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\lib\aheader.h
+
+1590050685 c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\caspars_lib\lib\gheader.h
 

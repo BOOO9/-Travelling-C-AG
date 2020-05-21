@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1590051151 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
+1590054119 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
 	<stdio.h>
 	<stdlib.h>
 	"lib/CCheader.h"
 	"lib/Aheader.h"
 	"lib/Gheader.h"
 
-1590050273 c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\lib\ccheader.h
+1590053545 c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\lib\ccheader.h
 
 1589885413 source:c:\users\user01\documents\bst studium\pad2\projekt\test\travelling-c-ag\main\main.c
 	<stdio.h>
