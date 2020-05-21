@@ -3,5 +3,6 @@
 
 void test_Fnct_Grue();
 void nearestNeighbor();
+void printShortesRoute();
 
 #endif // GHEADER_H_INCLUDED

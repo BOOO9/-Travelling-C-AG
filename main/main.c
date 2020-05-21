@@ -23,6 +23,7 @@ typedef struct
 }cityTemp;
 
 cityTemp citys[100];
+cityTemp citys_sorted[100];
 
 int cntr = 0;
 
@@ -66,6 +67,14 @@ int main()
         }
         else if (choice == 2)
         {
+            cityInput(&cntr, citys);
+            printf("\n\n\n\n----------\n\n\n");
+            nearestNeighbor(citys, citys_sorted, cntr);
+            printShortesRoute(citys_sorted, cntr);
+
+            printf("\n\n");
+
+
             //Eingabe von Städtenamen
             //TSM-Problem
 
