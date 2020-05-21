@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1590051189 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\andis_lib\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

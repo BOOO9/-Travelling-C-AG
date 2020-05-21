@@ -32,9 +32,17 @@ int *cntr_ptr = &cntr;
 int main()
 {
     int running = 1;
-    int test = 0;
+
+    int position=1;
+    char cityName[50] = "Ennadai";
+
+    readcsv(cntry, position, cityName);
+
+    printf("%f\n", cntry[1].lat);
 
 
+
+/*
     while (running == 1)                            //Menü Schleife
     {
         int choice = menu();                        //menu() gibt Zahl von 0-3 zurück
@@ -63,6 +71,7 @@ int main()
         else running = 0;
 
     }
+    */
 
 
 }

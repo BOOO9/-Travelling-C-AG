@@ -9,24 +9,24 @@ void test_Fnct_Andi()
 }
 */
 
-/*
-typedef struct dataElement
+
+typedef struct cntryTemp
 {
     char city[50];
-    char cityAscii[50];
+    char city_ascii[50];
     float lat;
     float lng;
     char country[50];
     char iso2[3];
     char iso3[4];
-    char adminName[50];
+    char admin_name[50];
     char capital[50];
     long population;
     long id;
-};
-*/
+}cntryTemp;
 
-void test_Fnct_Andi(struct cntryTemp searchCity[], int position, char cityName[])
+
+void readcsv(struct cntryTemp searchCity[], int position, char cityName[])
 {
     struct cntryTemp dataTemp;
 
@@ -51,7 +51,7 @@ void test_Fnct_Andi(struct cntryTemp searchCity[], int position, char cityName[]
     if (myfile == NULL)
     {
         printf("Datei nicht gefunden");
-        return -1;
+        return;
     }
     else
     {
@@ -110,10 +110,12 @@ void test_Fnct_Andi(struct cntryTemp searchCity[], int position, char cityName[]
                     puffer_ptr = NULL;
                 }
             }
+
             if(strcmp(dataTemp.city_ascii,cityName)==0)
             {
                 searchCity[position]=dataTemp;
-                printf("city: %s\n",searchCity[position].city);
+
+                /*printf("city: %s\n",searchCity[position].city);
                 printf("cityAscii: %s\n",searchCity[position].city_ascii);
                 printf("lat: %f\n",searchCity[position].lat);
                 printf("lng: %f\n",searchCity[position].lng);
@@ -124,8 +126,9 @@ void test_Fnct_Andi(struct cntryTemp searchCity[], int position, char cityName[]
                 printf("capital: %s\n",searchCity[position].capital);
                 printf("population: %ld\n",searchCity[position].population);
                 printf("id: %ld\n",searchCity[position].id);
-                break;
+                */break;
             }
+
         }
     }
     fclose(myfile);
