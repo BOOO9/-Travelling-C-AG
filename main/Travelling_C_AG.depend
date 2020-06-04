@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1590055408 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
+1591284031 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\main\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	<math.h>
 	"lib/CCheader.h"
 	"lib/Aheader.h"
 	"lib/Gheader.h"

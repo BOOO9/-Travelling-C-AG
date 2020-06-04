@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1591283346 source:c:\users\user01\documents\bst studium\pad2\projekt\travelling-c-ag\libarys\grues_libary\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+

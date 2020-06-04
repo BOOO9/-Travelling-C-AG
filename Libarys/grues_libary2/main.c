@@ -36,8 +36,8 @@ void printShortesRoute(cityTemp citys_sorted[101], int entries)
 void nearestNeighbor(cityTemp citys[100], cityTemp citys_sorted[100], int entries)
 {
 
-    printf("test\n\ntest\n\ntest\n\n");
-    /*
+
+
 
     float distance = 1000;
     float shortestDistance = 1000;
@@ -118,6 +118,6 @@ void nearestNeighbor(cityTemp citys[100], cityTemp citys_sorted[100], int entrie
 
     //printf("\nTotal distance = %f\n\n", totalDistance);
 
-    */
+
 }
 

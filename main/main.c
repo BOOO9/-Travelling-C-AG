@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <math.h>
 #include "lib/CCheader.h"
 #include "lib/Aheader.h"
 #include "lib/Gheader.h"
@@ -25,18 +27,17 @@ typedef struct
 cityTemp citys[100];
 cityTemp citys_sorted[100];
 
-int cntr = 0;
-
-
 
 
 int main()
 {
     int running = 1;
-
+    int cntr = 0;
 
     while (running == 1)                            //Menü Schleife
     {
+        cntr = 0;
+
         int choice = menu();                        //menu() gibt Zahl von 0-3 zurück
 
         if (choice == 1)
@@ -63,13 +64,18 @@ int main()
                 }
 
 
+
             //system("cls");
         }
         else if (choice == 2)
         {
+
+
             cityInput(&cntr, citys);
-            printf("\n\n\n\n----------\n\n\n");
+            printf("\n\n\n\n-------------------------------\n\n\n");
+
             nearestNeighbor(citys, citys_sorted, cntr);
+
             printShortesRoute(citys_sorted, cntr);
 
             printf("\n\n");
@@ -93,5 +99,4 @@ int main()
 
 
 }
-
 

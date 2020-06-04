@@ -10,25 +10,28 @@ void test_Fnct_Andi()
 */
 
 
-typedef struct cntryTemp
+typedef struct
 {
     char city[50];
     char city_ascii[50];
     float lat;
     float lng;
     char country[50];
-    char iso2[3];
-    char iso3[4];
+    char iso2 [3];
+    char iso3 [4];
     char admin_name[50];
     char capital[50];
     long population;
     long id;
-}cntryTemp;
+
+}cityTemp;
 
 
-void readcsv(struct cntryTemp searchCity[], int position, char cityName[])
+void readcsv(cityTemp searchCity[], int position, char cityName[])
 {
-    struct cntryTemp dataTemp;
+
+
+    cityTemp dataTemp;
 
     char puffer[200];
     char delimiter[]="\"";
@@ -132,8 +135,14 @@ void readcsv(struct cntryTemp searchCity[], int position, char cityName[])
         }
     }
     fclose(myfile);
-    return;
+
+
+
+
+
+
 }
+
 
 /*
 int main()

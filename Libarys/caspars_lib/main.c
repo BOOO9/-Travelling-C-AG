@@ -26,6 +26,94 @@ typedef struct
 }cityTemp;
 
 
+/*
+
+
+void user_input_to_city_Struct()
+{
+    cityTemp temp_city;
+
+    printf("Geben Sie eine Stadt ein: ");
+    fgets(temp_city.city, 50, stdin);
+
+    temp_city.city[strlen(temp_city.city) - 1] = '\0';
+
+
+    printf("In welchem Land ist %s: ", temp_city.city);
+    fgets(temp_city.country, 50, stdin);
+
+    temp_city.country[strlen(temp_city.country) - 1] = '\0';
+
+    printf("An welchen Laengengrad liegt %s: ", temp_city.city);
+    scanf("%f", &temp_city.lat);
+
+    printf("An welchem Breitengrad liegt %s: ", temp_city.city);
+    scanf("%f", &temp_city.lat);
+
+    printf("Wie viele Menschen leben in %s: ", temp_city.city);
+    scanf("%d", &temp_city.population);
+
+
+
+
+
+
+
+
+
+
+    printf("city: %s\n",temp_city.city);
+
+    printf("cityAscii: %s\n",temp_city.city_ascii);
+    printf("lat: %f\n",temp_city.lat);
+    printf("lng: %f\n",temp_city.lng);
+    printf("country: %s\n",temp_city.country);
+    printf("iso2: %s\n",temp_city.iso2);
+    printf("iso3: %s\n",temp_city.iso3);
+    printf("adminName: %s\n",temp_city.admin_name);
+    printf("capital: %s\n",temp_city.capital);
+    printf("population: %ld\n",temp_city.population);
+    printf("id: %ld\n",temp_city.id);
+
+
+}
+
+
+
+
+void city_struct_to_csv()
+{
+
+
+
+    cityTemp temp_city;
+
+    char word1[25] = "motherfuckingtest4\n";        //city,"city_ascii","lat","lng","country","iso2","iso3","admin_name","capital","population","id"
+
+    char word2[25];
+
+    //fgets(word2, 25, stdin);
+
+    char filename[20]="test.csv";                   //"worldcities.csv";
+
+    FILE *myfile;
+
+    myfile = fopen(filename,"a");
+
+    if (myfile == NULL)
+    {
+        printf("Datei nicht gefunden");
+        exit(-1);
+    }
+
+    fputs(word1, myfile);
+
+    fclose(myfile);
+
+
+}
+*/
+
 
 int menu()
 {
@@ -110,16 +198,3 @@ void cityInput(int *cntr_ptr, cityTemp city[100])
 
 }
 
-/*
-int main()
-{
-
-    cityInput (&cntr, city);
-
-    printf("%f", city[1].lat);
-
-
-
-}
-
-*/
