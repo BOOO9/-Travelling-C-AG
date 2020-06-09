@@ -74,9 +74,23 @@ int main()
             cityInput(&cntr, citys);
             printf("\n\n\n\n-------------------------------\n\n\n");
 
+
+            printf("\n\ncntr %d\n\n", cntr);
+
+
             nearestNeighbor(citys, citys_sorted, cntr);
 
             printShortesRoute(citys_sorted, cntr);
+
+
+            for(int i = 1; i < cntr+1; i++)                             // test ob die Daten eingelesen werden
+                {
+
+                    printf("\n\ncity: %s\n",citys_sorted[i].city);
+
+                    printf("---------------------------------------------");
+
+                }
 
             printf("\n\n");
 

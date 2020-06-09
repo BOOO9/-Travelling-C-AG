@@ -26,11 +26,13 @@ typedef struct
 }cityTemp;
 
 
-/*
+
 
 
 void user_input_to_city_Struct()
 {
+
+
     cityTemp temp_city;
 
     printf("Geben Sie eine Stadt ein: ");
@@ -38,8 +40,7 @@ void user_input_to_city_Struct()
 
     temp_city.city[strlen(temp_city.city) - 1] = '\0';
 
-
-    printf("In welchem Land ist %s: ", temp_city.city);
+    printf("In welchem Land liegt %s: ", temp_city.city);
     fgets(temp_city.country, 50, stdin);
 
     temp_city.country[strlen(temp_city.country) - 1] = '\0';
@@ -53,17 +54,37 @@ void user_input_to_city_Struct()
     printf("Wie viele Menschen leben in %s: ", temp_city.city);
     scanf("%d", &temp_city.population);
 
+    printf("Was ist der ascii Code von %s: ", temp_city.city);
+    fgets(temp_city.city_ascii, 50, stdin);
+
+    temp_city.city_ascii[strlen(temp_city.city_ascii) - 1] = '\0';
+
+    printf("Was ist der ISO2 Code von %s: ", temp_city.city);
+    fgets(temp_city.iso2, 3, stdin);
+
+    temp_city.iso2[strlen(temp_city.iso2) - 1] = '\0';
+
+    printf("Was ist der ISO3 Code von %s: ", temp_city.city);
+    fgets(temp_city.iso3, 4, stdin);
+
+    temp_city.iso3[strlen(temp_city.iso3) - 1] = '\0';
+
+    printf("Was ist der Admin Name von %s: ", temp_city.city);
+    fgets(temp_city.admin_name, 50, stdin);
+
+    temp_city.admin_name[strlen(temp_city.admin_name) - 1] = '\0';
+
+    printf("Capital von %s: ", temp_city.city);
+    fgets(temp_city.capital, 50, stdin);
+
+    temp_city.capital[strlen(temp_city.capital) - 1] = '\0';
+
+    printf("Was ist die ID von %s: ", temp_city.city);
+    scanf("%d", &temp_city.id);
 
 
-
-
-
-
-
-
-
+    printf("\n\n");
     printf("city: %s\n",temp_city.city);
-
     printf("cityAscii: %s\n",temp_city.city_ascii);
     printf("lat: %f\n",temp_city.lat);
     printf("lng: %f\n",temp_city.lng);
