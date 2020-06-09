@@ -8,109 +8,115 @@
 
 
 
-typedef struct
-{
-    char city[50];
-    char city_ascii[50];
-    float lat;
-    float lng;
-    char country[50];
-    char iso2 [3];
-    char iso3 [4];
-    char admin_name[50];
-    char capital[50];
-    long population;
-    long id;
-
-}cityTemp;
-
-cityTemp citys[100];
-cityTemp citys_sorted[100];
-
-
-
 int main()
 {
+
+
+    cityTemp *citys = malloc(sizeof(cityTemp));
+    cityTemp *citys_sorted = malloc(sizeof(citys));
+
+
     int running = 1;
     int cntr = 0;
+    int cntr4new = 0;
 
     while (running == 1)                            //Menü Schleife
     {
         cntr = 0;
 
-        int choice = menu();                        //menu() gibt Zahl von 0-3 zurück
+        int choice = menu();                        //menu() gibt Zahl von 0-3 zurück; 1 = Städte nach Namen sortieren; 2 = Travelling SP; 3 = Städte zur CSV hinzufügen
 
-        if (choice == 1)
+        switch(choice)
         {
 
-            cityInput(&cntr, citys);                // liest Städte in das citys[] Array ein und füllt das Array mit den Daten aus der CSV
+            case 1:
+            {
+
+                cityInput(&cntr, citys);                // liest Städte in das citys[] Array ein und füllt das Array mit den Daten aus der CSV
+
+
+                    for(int i = 1; i < cntr+1; i++)                             // test ob die Daten eingelesen werden
+                    {
+
+                        printf("\n\ncity: %s\n",citys[i].city);
+                        printf("cityAscii: %s\n",citys[i].city_ascii);
+                        printf("lat: %f\n",citys[i].lat);
+                        printf("lng: %f\n",citys[i].lng);
+                        printf("country: %s\n",citys[i].country);
+                        printf("iso2: %s\n",citys[i].iso2);
+                        printf("iso3: %s\n",citys[i].iso3);
+                        printf("adminName: %s\n",citys[i].admin_name);
+                        printf("capital: %s\n",citys[i].capital);
+                        printf("population: %ld\n",citys[i].population);
+                        printf("id: %ld\n\n",citys[i].id);
+                        printf("---------------------------------------------");
+
+                    }
+
+
+
+                //system("cls");
+
+                break;
+
+            }
+
+            case 2:
+            {
+
+
+                cityInput(&cntr, citys);
+
+                nearestNeighbor(citys, citys_sorted, cntr);
+
+                printShortesRoute(citys_sorted, cntr);
 
                 for(int i = 1; i < cntr+1; i++)                             // test ob die Daten eingelesen werden
-                {
+                    {
 
-                    printf("\n\ncity: %s\n",citys[i].city);
-                    printf("cityAscii: %s\n",citys[i].city_ascii);
-                    printf("lat: %f\n",citys[i].lat);
-                    printf("lng: %f\n",citys[i].lng);
-                    printf("country: %s\n",citys[i].country);
-                    printf("iso2: %s\n",citys[i].iso2);
-                    printf("iso3: %s\n",citys[i].iso3);
-                    printf("adminName: %s\n",citys[i].admin_name);
-                    printf("capital: %s\n",citys[i].capital);
-                    printf("population: %ld\n",citys[i].population);
-                    printf("id: %ld\n\n",citys[i].id);
-                    printf("---------------------------------------------");
+                        printf("\n\ncity: %s\n",citys_sorted[i].city);
 
-                }
+                        printf("---------------------------------------------");
+
+                    }
 
 
+                //Eingabe von Städtenamen
+                //TSM-Problem
 
-            //system("cls");
-        }
-        else if (choice == 2)
-        {
+                break;
+            }
+            case 3:
 
-
-            cityInput(&cntr, citys);
-            printf("\n\n\n\n-------------------------------\n\n\n");
-
-
-            printf("\n\ncntr %d\n\n", cntr);
+            {
 
 
-            nearestNeighbor(citys, citys_sorted, cntr);
 
-            printShortesRoute(citys_sorted, cntr);
+                break;
+            }
 
+            case 0:
 
-            for(int i = 1; i < cntr+1; i++)                             // test ob die Daten eingelesen werden
-                {
-
-                    printf("\n\ncity: %s\n",citys_sorted[i].city);
-
-                    printf("---------------------------------------------");
-
-                }
-
-            printf("\n\n");
+                running = 0;
+                break;
 
 
-            //Eingabe von Städtenamen
-            //TSM-Problem
+            default:
+
+                printf("Error");
+
+                running = 0;
+                break;
+
+
 
         }
-        else if (choice == 3)
-        {
-            //Hinzufügen von Städten
 
-        }
-        else if (choice == 0) running = 0;
 
-        else running = 0;
 
     }
 
-
+    return 0;
 
 }
 
